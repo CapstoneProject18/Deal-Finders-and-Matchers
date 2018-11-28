@@ -8,11 +8,11 @@ This instructions will help get you a copy of the project up and running on your
 
 # Prerequisites
 
-install Xampp
+Install Xampp
 
 https://www.apachefriends.org/index.html
 
-install editor       //Can use other also, Atom,Sublime text etc....
+Install editor       //Can use other also, Atom,Sublime text etc....
 
 Notepad++
 
@@ -31,17 +31,22 @@ https://developers.google.com/maps/documentation/
   -Create Database Demo -- phpMySql
   
 #  Built With
-  -Xampp Server
+  -Xampp Server/WAMP Server
   
-  -Php
+  -Php and JavaScript
   
   -HTML
   
   -CSS
   
-  -Google Map API
+  -Google Map API and Google Places API
   
+# Tools Used
+  -Notepad++
   
+  -Sublime Text Editor
+  
+  -Code Writer(Windows Store Application)
   
   
   
