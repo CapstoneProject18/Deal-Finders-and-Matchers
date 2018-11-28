@@ -12,7 +12,7 @@ install Xampp
 
 https://www.apachefriends.org/index.html
 
-install editor       //Can use other also, Atom,Sublime text etc....
+install editor              //Can use other example, Atom,Sublime text etc....
 
 Notepad++
 
