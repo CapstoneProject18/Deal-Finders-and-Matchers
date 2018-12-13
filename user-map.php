@@ -1,6 +1,7 @@
 <?php
 include_once 'header.php';
 include 'locations_model.php';
+
 //get_unconfirmed_locations();exit;
 ?>
 
@@ -17,7 +18,40 @@ include 'locations_model.php';
         var map;
         var red_icon =  'http://maps.google.com/mapfiles/ms/icons/red-dot.png' ;
         var purple_icon =  'http://maps.google.com/mapfiles/ms/icons/purple-dot.png' ;
-        var locations = <?php get_confirmed_locations() ?>;
+        var locations =
+        <?php
+        
+            if ( isset($_GET['desc']) )
+            {
+                $search_value  = $_GET['desc'];
+
+                $con=mysqli_connect ("localhost", 'root', '','demo');
+
+                if (!$con) {
+                    die('Not connected : ' . mysqli_connect_error());
+                }
+
+                // update location with location_status if admin location_status.
+                $sqldata = mysqli_query($con,"select id ,lat,lng,description,location_status as isconfirmed 
+                from locations WHERE location_status = 1 and description like '%{$search_value}%'");
+
+                $rows = array();
+
+                while($r = mysqli_fetch_assoc($sqldata)) {
+                    $rows[] = $r;
+
+                }
+
+                $indexed = array_map('array_values', $rows);
+
+                echo json_encode($indexed); 
+            } 
+            else 
+            {
+                get_confirmed_locations();        
+            }
+        ?>;
+        console.log(locations);
         var myOptions = {
             zoom: 7,
             center: new google.maps.LatLng(20.5937, 78.9629),  //
@@ -30,7 +64,7 @@ include 'locations_model.php';
          * @type {Object.<string, google.maps.LatLng>}
          */
         var markers = {};
-
+            
         /**
          * Concatenates given lat and lng with an underscore and returns it.
          * This id will be used as a key of marker to cache the marker in markers object.
