@@ -2,8 +2,6 @@
 
 A drop-in module for a website that shows a google map with list of stores in the sidebar. 
 
-![Gif](/demo.gif?raw=true)
-
 ## Features
 - draws all deal on a map
 - shows a list of deal in the side bar providing map navigation
