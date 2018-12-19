@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Store Locator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="dist/store-locator.css">
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Deal Finder</h1>
+    <div id="my-store-locator">
+      <!-- map will be rendered here-->
+    </div>
+    <script src="dist/store-locator.js"></script>
+    <script>
+      storeLocator({
+        container: 'my-store-locator',
+        apiKey: 'AIzaSyCO9TfbbV0j_iRdsi2b2rZx26jEVd-5XI0',
+        markerIconSize: [40, 40],
+        limit: 1,
+        searchHint: "Not all stores sell our whole range so if you're looking for a specific product we recommend you call ahead.",
+        homeLocationHint: 'Current location',
+        stores: [
+          {
+            name: 'Cafe Coffee Day',
+            address: 'C # 1, 2,3 PP Tower, Netaji Subhash Place, Pitampura, Delhi, 110034',
+            location: {lat: 28.695090, lng: 77.130710},
+            website: 'https://www.cafecoffeeday.com'
+          },
+          {
+            name: 'Aapno Bazar',
+            address: "Neemrana Fort Rd, Neemrana, Rajasthan 301705",
+            location: {lat: 27.986730, lng: 76.391020}
+          },
+          {
+            name: "Decathlon Jaipur",
+            address: 'Khasara No. 1123, Ajmer Road, Gram, Bhakrota, Jaipur, Rajasthan 302026',
+            location: {lat: 26.902470, lng: 75.773580},
+			website: 'https://www.decathlon.in/c/284-decathlon-ajmer-road'
+          },
+          {
+            name: 'Vijay Sales Opera House',
+            address: 'VIJAY SALES - OPERA HOUSE, 29, Mama Paramanand Marg, Opera House, Girgaon, Mumbai, Maharashtra 400004',
+            location: {lat: 18.956840, lng: 72.815680},
+			website: 'https://www.vijaysales.com'
+          },
+          {
+            name: 'The Raymond Shop',
+            address: 'The Raymond Shop, 40-41, Velachery Main Road, Near Vijay Nagar Bus Stop, Velachery, Tambaram, Chennai, Tamil Nadu 600042',
+            location: {lat: 13.030109, lng: 80.203047}
+          },
+          {
+            name: 'Sky Bags',
+            address: 'Sky Bags, 181, Mahatma Gandhi Rd, Central Avenue, Bara Bazar, Jorasanko, Kolkata, West Bengal 700007',
+            location: {lat: 22.579140, lng: 88.358800}
+          },
+          {
+            name: 'Dell Exclusive Store',
+            address: 'Dell Exclusive Store, 7, Manish Link Plaza 2, Sector 5, Main Market, Dwarka,, New Delhi, Delhi 110075',
+            location: {lat: 28.581180, lng: 77.050890}
+          },
+          {
+            name: 'Cafe Coffee Day',
+            address: 'Inside Hans Resorts, Delhi Ajmer Express Way, Opp Top Ramen Factory, National Highway 8, Gurgaon, Hariyana - 122002',
+            location: {lat: 28.131940, lng: 76.645700}
+          }
+        ]
+      })
+    </script>
+  </body>
+</html>
